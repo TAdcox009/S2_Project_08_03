@@ -58,11 +58,17 @@
         border: 2px solid gray;
     }
 
+/* This inserts the text of the data-date attribute before every data cell and sets the atribute to the coordinates (0, 0) with a width of 40% and padding space of 5 pixels. */
+
+    td::before {
+        content: attr(data-date);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        padding: 5px;
+        width: 40%;
+    }
 }
-
-
-/* 14. Create a style rule that inserts the text of the data-date attribute before every data cell. Place the attribute text using absolute positioning at the coordinates (0, 0) with a width of 40% and padding space of 5 pixels.
-15. Next, you design the layout of the calendar for tablet and desktop devices. Go to the Tablet and Desktop Styles section and insert a media query for screen devices with a minimum width of 641 pixels. */
 
 
 
@@ -70,3 +76,7 @@
    Tablet and Desktop Styles: greater than 640px
    =============================================
 */
+/*This is a media query for screen devices with a minimum width of 641 pixels. */
+@media only screen and (min-width: 641px) {
+
+}
