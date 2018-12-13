@@ -110,8 +110,9 @@
     }
 
     td {
-        content: attr(data-date Feb);
+        content: attr(data-date:Feb);
         background-color: rgba(232, 214, 148, 0.6);
+        box-shadow: inset, gray 0px 0px 20px;
         
     }
 }
