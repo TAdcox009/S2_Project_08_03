@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS, 7th Edition
+   Tutorial 6
+   Case Problem 3
+
+   Calendar Style Sheet
+    Author: Todd Adcox Jr 
+    Date:  12-12-18  
+
+   Filename:   lht_tables.css
+
+*/
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+/* this is a media query fro screen devices with a max width of 640 pixels, displays the following elements as block, */
+@media only screen and (max-width: 640px) {
+
+    table,
+    tbody,
+    tr,
+    td,
+    th,
+    caption {
+        display: block;
+    }
+
+    /* doesn't display the thead and h1 elements in mobile styles */
+    thead,
+    h1 {
+        display: none;
+    }
+
+    /* displays the caption in white with a gray background, a font size of 1.5em, and a line height of 2em */
+    caption {
+        color: white;
+        background-color: rgb(122, 127, 130);
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+
+    /* This adds a 1-pixel dotted gray border, changes the text color to rgb(11, 12, 145), places the cell using relative positioning, sets the left padding to 40%, and sets the minimum height to 40 pixels. */
+    td {
+        border: 1px dotted gray;
+        color: rgb(11, 12, 145);
+        position: relative;
+        padding-left: 40%;
+        min-height: 40px;
+    }
+
+    /* Displays every odd-numbered table row with a background color of rgb(255, 235, 178) and a 2-pixel solid gray border. */
+    tr:nth-of-type(odd) {
+        background-color: rgb(255, 235, 178);
+        border: 2px solid gray;
+    }
+
+}
+
+
+/* 14. Create a style rule that inserts the text of the data-date attribute before every data cell. Place the attribute text using absolute positioning at the coordinates (0, 0) with a width of 40% and padding space of 5 pixels.
+15. Next, you design the layout of the calendar for tablet and desktop devices. Go to the Tablet and Desktop Styles section and insert a media query for screen devices with a minimum width of 641 pixels. */
+
+
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
