@@ -58,7 +58,6 @@
         border: 2px solid gray;
     }
 
-/* This inserts the text of the data-date attribute before every data cell and sets the atribute to the coordinates (0, 0) with a width of 40% and padding space of 5 pixels. */
 
     td::before {
         content: attr(data-date);
@@ -78,5 +77,55 @@
 */
 /*This is a media query for screen devices with a minimum width of 641 pixels. */
 @media only screen and (min-width: 641px) {
+    
+    /*This affects the table element, it is displaying the background image to lht_photo1.png with no tiling and is only showing up in the bottom-right corner of the table with a width of 40%, adds a 6-pixel double border with color value rgb(154, 64, 3), sets the table borders to be collapsed, sets top and bottom margins to 20 pixels, the left and right margins to auto, uses a fixed layout for the table content, and sets the width to 85%. */
+    table {
+        background-image: url(lht_photo1.png);
+        background-repeat: no-repeat;
+        background-position: bottom right;
+        background-size: 40%;
+        border: 6px double rgb(154, 64, 3);
+        border-collapse: collapse;
+        margin: 20px auto 20px auto;
+        table-layout: fixed;
+        width: 85%;
+    }
 
+    /* 17. For every heading and data cell it adds a 1-pixel solid gray border, sets the font size to 0.85em and with normal weight has 5 pixels of padding space,maligns the cell text with the top of the cell, sets the width to 14.28%, and
+    allows the browser to wrap cell text within individual words */
+    th, td {
+        border: 1px solid gray;
+        font-size: 0.85em;
+        font-weight: normal;
+        padding: 5px;
+        text-align: top;
+        width: 14.28%;
+        word-wrap: break-word;
+    }
+
+    /* For the td elements, it is setting the background color to rgba(171, 171, 171, 0.6) and sets the text color to rgb(11, 12, 145). */
+    td {
+        background-color: rgba(171, 171, 171, 0.6);
+        color: rgb(11, 12, 145);
+    }
+
+    td {
+        content: attr(data-date Feb);
+        background-color: rgba(232, 214, 148, 0.6);
+        
+    }
 }
+
+
+/* 
+
+
+19.Lewis wants the February dates to appear in a different format from the January and March dates. Create a style rule for data cells whose data-date attribute contains the text “Feb” that: 
+a) changes the background color to the semi-transparent value rgba(232, 214, 148, 0.6) and
+ b) adds a gray inset box shadow with horizontal and vertical offsets of 0 pixels and a blur of 20 pixels. (Hint: See Figure 2-15 for a list of attribute selectors.)
+20. Create a style rule for the table caption that:
+ a) displays the caption at the top of the table,
+  b) centers the caption text,
+   c) adds 10 pixels to the bottom padding space, and
+    d) sets the font size to 1.2em and the letter spacing to 3 pixels.
+21. For heading cells within the table header, create a style rule to change the background color to rgb(154, 64, 3) and the text color to white. */
