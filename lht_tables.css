@@ -110,25 +110,25 @@
         color: rgb(11, 12, 145);
     }
 
-    td {
+/* data cells with the data-date attribute containimg the text “Feb”, changes the background color to rgba(232, 214, 148, 0.6) and adds a gray box shadow with horizontal and vertical offsets of 0 pixels and a blur of 20 pixels*/
+    td[data-date*="Feb"] {
+        background: rgba(232, 214, 148, 0.6);
+        box-shadow: gray 0px 0px 20px inset;
+    }
 
-        background-color: rgba(232, 214, 148, 0.6);
-        box-shadow: inset gray 0px 0px 20px;
+    
+/* For the table caption elements, it displays it at the top of the table, centers the text, adds 10 pixels of padding to the bottom, sets the font size to 1.2em and the letter spacing to 3 pixels. */
+    caption {
+        caption-side: top;
+        text-align: center;
+        padding-bottom: 10px;
+        font-size: 1.2em;
+        letter-spacing: 3px;
+    }
+
+    /*Heading cell elements creates a style rule that changes the background color to rgb(154, 64, 3) and the text color to white. */
+    th {
+        background: rgb(154, 64, 3);
+        color: white;
     }
 }
-
-
-
-
-/* 
-
-
-19.Lewis wants the February dates to appear in a different format from the January and March dates. Create a style rule for data cells whose data-date attribute contains the text “Feb” that: 
-a) changes the background color to the semi-transparent value rgba(232, 214, 148, 0.6) and
- b) adds a gray inset box shadow with horizontal and vertical offsets of 0 pixels and a blur of 20 pixels. (Hint: See Figure 2-15 for a list of attribute selectors.)
-20. Create a style rule for the table caption that:
- a) displays the caption at the top of the table,
-  b) centers the caption text,
-   c) adds 10 pixels to the bottom padding space, and
-    d) sets the font size to 1.2em and the letter spacing to 3 pixels.
-21. For heading cells within the table header, create a style rule to change the background color to rgb(154, 64, 3) and the text color to white. */

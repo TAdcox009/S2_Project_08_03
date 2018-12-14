@@ -16,3 +16,17 @@
 
 
 /* Column Styles */
+
+/* article element, the column width is being set to 260 pixels, column gap to 20 pixels, adds a 1-pixel solid dividing line between columns with the color value of rgb(154, 64, 31), and set the widows and orphans to 2 lines. */
+article {
+   column-width: 260px;
+   column-gap: 20px;
+   column-rule: 1px solid rgb(154, 64, 31);
+   widows: 2;
+   orphans: 2;
+}
+
+/* h1 heading within the article element, extends it across all of the columns. */
+article h1 {
+   column-span: all;
+}
